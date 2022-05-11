@@ -1,3 +1,9 @@
+/* WE BEGIN */
+
+html {
+    scroll-behavior: smooth;  
+}
+
 body {
     font-family: 'Barlow', sans-serif;
     font-size:18px;
@@ -5,9 +11,11 @@ body {
     color: hsl(212, 27%, 19%);
 }
 
-.container {
-    position:relative;
+h1, h2, h3, h4, h5 {
+    font-family: 'Fraunces', serif;
 }
+
+/* HEADER - Logo & Nav */
 
 header {
     max-width:1440px;
@@ -54,6 +62,7 @@ nav a.contact:hover {
     background:hsl(212, 27%, 19%);
 }
 
+/* WELCOME - Citrus Banner */
 .welcome {
     margin-top:-90px;
     height:100vh;
@@ -66,7 +75,6 @@ nav a.contact:hover {
 }
 
 .welcome h1 {
-    font-family: 'Fraunces', serif;
     font-size:56px;
     letter-spacing:8.75px;
     line-height:69px;
@@ -76,3 +84,154 @@ nav a.contact:hover {
     text-transform: uppercase;
     margin-bottom:95px;
 }
+
+/* CONTENT - Grids, Testimonials, Whatnot */
+
+.content-grid {
+    display:grid;
+    justify-content: center;
+    align-items:center;
+}
+
+.content-grid__pitches {
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows:repeat(3, 1fr);
+}
+
+@media (max-width:900px) {
+    .content-grid__pitches {
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(6, 1fr)
+    }
+}
+
+.content-grid__pitches--img, .content-grid__pitches--copy {
+    min-height:600px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.content-grid__pitches--copy {
+    background:#F2F2F2;
+}
+
+.content-grid__pitches--copy h2 {
+    color:hsl(212, 27%, 19%);
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -0.285714px;
+    margin-bottom:30px;
+}
+
+.content-grid__pitches--copy p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.128571px;
+    color: #808397;
+    margin-bottom: 40px;
+}
+
+.content-grid__pitches--copy a {
+    font-family: 'Fraunces', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: hsl(212, 27%, 19%);
+    position: relative;
+    z-index: 1;
+}
+
+.content-grid__pitches--copy a::after {
+    position: absolute;
+    bottom:0;
+    left:0;
+    display:block;
+    content:'';
+    width:100%;
+    height:8px;
+    opacity:0.25;
+    z-index:-1;
+    transition:all 0.6s ease;
+}
+
+.content-grid__pitches--copy a:hover::after {
+    height:10px;
+    opacity:1
+}
+
+.content-grid__pitches--copy a.yellow::after {
+    background:hsl(51, 100%, 49%);
+}
+
+.content-grid__pitches--copy a.red::after {
+    background:hsl(7, 99%, 70%);
+}
+
+.content-grid__pitches--copyContainer {
+    max-width:445px;
+}
+
+.content-grid__pitches--imgPlusCopy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 35px;
+    height:600px;
+}
+
+.content-grid__pitches--imgPlusCopy h3 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -0.2px;
+    color:hsl(212, 27%, 19%);
+    margin-bottom:25px;
+}
+
+.content-grid__pitches--imgPlusCopy p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: -0.114286px;
+    max-width:40ch;
+}
+
+.content-grid__pitches--imgPlusCopyGD {
+    background:url(images/desktop/image-graphic-design.jpg) no-repeat center top;
+    background-size:cover;
+}
+
+.content-grid__pitches--imgPlusCopyGD p {
+    color:hsl(167, 40%, 24%);
+}
+
+.content-grid__pitches--imgPlusCopyP {
+    background:url(images/desktop/image-photography.jpg) no-repeat center top;
+    background-size:cover;
+}
+
+.content-grid__pitches--imgPlusCopyP p {
+    color:hsl(198, 62%, 26%);
+}
+
+.yellowBg {
+    background:hsl(51, 100%, 49%)
+}
+
+.redBg {
+    background:hsl(7, 99%, 70%);
+}
+
