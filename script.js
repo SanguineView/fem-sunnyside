@@ -1,16 +1,25 @@
 // welcome arrow scroll 
 
-const links = document.getElementById("#scrollBtn");
+const scrollBtn = document.getElementById('scrollBtn');
 
-links.addEventListener("click", clickHandler);
+scrollBtn.addEventListener('click', clickHandler);
 
 function clickHandler(e) {
   e.preventDefault();
-  const href = this.getAttribute("href");
+  const href = this.getAttribute('href');
   const offsetTop = document.querySelector(href).offsetTop;
 
   scroll({
     top: offsetTop,
-    behavior: "smooth"
+    behavior: 'smooth'
   });
+}
+
+const mobileBtn = document.getElementById('mobileBtn')
+const nav = document.querySelector('nav')
+
+mobileBtn.addEventListener('click', openMobileNav)
+
+function openMobileNav() {
+  nav.classList.toggle('active')
 }
