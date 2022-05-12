@@ -499,10 +499,11 @@ footer {
 
     .cg__pitches--img, .cg__pitches--copy {
         min-height:auto;
+        width:100%;
     }
 
     .cg__pitches--img img {
-        height:375px;
+        height:auto;
     }
 
     .cg__pitches--img.yellowBg {
@@ -597,6 +598,10 @@ footer {
         grid-template-rows: repeat(2, 1fr);
     }
 
+}
+
+
+@media (max-width:450px) {
     .cg__pitches--imgPlusCopyGD {
         background:url(images/mobile/image-graphic-design.jpg) no-repeat center top;
         background-size: cover;
