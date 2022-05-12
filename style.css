@@ -565,6 +565,10 @@ footer {
         flex-direction: column;
     }
 
+    .testimonials__quote img {
+        margin-top:65px;
+    }
+
     .testimonials__quote img,
     .testimonials__quote p.quote {
         margin-bottom: 35px;
