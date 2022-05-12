@@ -22,4 +22,5 @@ mobileBtn.addEventListener('click', openMobileNav)
 
 function openMobileNav() {
   nav.classList.toggle('active')
+  mobileBtn.classList.toggle('clicked')
 }

@@ -85,6 +85,26 @@ header button {
     margin-bottom:95px;
 }
 
+.welcome a:hover {
+    animation-name: arrowBounce;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+}
+
+@keyframes arrowBounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform:translateY(10px);
+    }
+
+    100% {
+        transform:translateY(0);
+    }
+}
+
 /* CONTENT - Grids, Pitches, Testimonials, Whatnot */
 
 .cg {
