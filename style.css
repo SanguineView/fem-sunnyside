@@ -398,26 +398,24 @@ footer {
         padding:0 25px;
     }
 
-    nav.main {
-        display:none;
+    nav {
         padding:40px 0;
         position: absolute;
         width: 329px;
-        left: 5%;
+        left: 50%;
         top: 105px;
         background: #fff;
         text-align:center;
-        transform:translateX(-500px);
+        transform:translate(-50%, -500px);
         opacity:0;
-        transition: all 0.3s ease-in-out;
-    }
-
-    nav.main.active {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease;
         display: flex;
         flex-direction: column;
         gap:35px;
-        top: 105px;
-        transform: none;
+    }
+
+    nav.active {
+        transform: translate(-50%, 0);
         opacity:1;
     }
 
@@ -467,12 +465,6 @@ footer {
         cursor: pointer;
     }
 
-    .welcome {
-        height:538px;
-        background: url(images/mobile/image-header.jpg) no-repeat center bottom;
-        background-size:contain;
-    }
-
     .welcome h1 {
         font-size: 40px;
         line-height: 49px;
@@ -485,6 +477,10 @@ footer {
     .cg__pitches {
         display: flex;
         flex-direction: column;
+    }
+
+    .cg__pitches--copyContainer {
+        max-width:100%;
     }
 
     .cg__pitches--copy {
@@ -527,17 +523,10 @@ footer {
 
     .cg__pitches--imgPlusCopy {
         order:5;
-        padding:0 25px 60px;
     }
 
-    .cg__pitches--imgPlusCopyGD {
-        background:url(images/mobile/image-graphic-design.jpg) no-repeat center top;
-        background-size: contain;
-    }
-
-    .cg__pitches--imgPlusCopyP {
-        background:url(images/mobile/image-photography.jpg) no-repeat center top;
-        background-size: contain;
+    .cg__pitches--imgPlusCopy p {
+        padding:0 25px;
     }
 
     .testimonials {
@@ -606,6 +595,16 @@ footer {
     .cg__gallery {
         grid-template-columns:repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    .cg__pitches--imgPlusCopyGD {
+        background:url(images/mobile/image-graphic-design.jpg) no-repeat center top;
+        background-size: contain;
+    }
+
+    .cg__pitches--imgPlusCopyP {
+        background:url(images/mobile/image-photography.jpg) no-repeat center top;
+        background-size: contain;
     }
 
 }
