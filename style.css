@@ -523,6 +523,7 @@ footer {
 
     .cg__pitches--imgPlusCopy {
         order:5;
+        width:100%;
     }
 
     .cg__pitches--imgPlusCopy p {
@@ -530,8 +531,7 @@ footer {
     }
 
     .testimonials {
-        padding-right: 25px;
-        padding-left: 25px;
+        padding:65px 25px;
     }
 
     .testimonials__title {
@@ -599,12 +599,12 @@ footer {
 
     .cg__pitches--imgPlusCopyGD {
         background:url(images/mobile/image-graphic-design.jpg) no-repeat center top;
-        background-size: contain;
+        background-size: cover;
     }
 
     .cg__pitches--imgPlusCopyP {
         background:url(images/mobile/image-photography.jpg) no-repeat center top;
-        background-size: contain;
+        background-size: cover;
     }
 
 }
